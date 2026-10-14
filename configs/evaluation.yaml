@@ -1,0 +1,13 @@
+extends: base.yaml
+project:
+  run_name: evaluation
+model:
+  backend: numpy_smoke
+dataset:
+  name: evaluation_fixture
+  validation_path: data/processed/evaluation.jsonl
+evaluation:
+  split: validation
+  action_space: continuous
+  latency_warmup: 3
+  latency_iterations: 20

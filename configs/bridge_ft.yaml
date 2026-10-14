@@ -1,0 +1,23 @@
+extends: base.yaml
+project:
+  run_name: bridge-lora
+model:
+  backend: openvla
+  id: openvla/openvla-7b
+dataset:
+  name: bridge_v2
+  version: RECORD_AFTER_INSPECTION
+  train_path: data/processed/bridge_v2_train.jsonl
+  validation_path: data/processed/bridge_v2_validation.jsonl
+training:
+  smoke_test: false
+  allow_large_run: false
+  micro_batch_size: 1
+  gradient_accumulation: 16
+  lora_rank: 8
+  lora_alpha: 16
+  learning_rate: 0.0001
+  epochs: 1
+
+# Deliberately disabled: set true only after recording a successful model-specific
+# smoke test, storage estimate, checkpoint location, and compatible runtime.

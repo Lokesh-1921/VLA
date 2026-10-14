@@ -1,0 +1,19 @@
+extends: base.yaml
+project:
+  run_name: custom-lora
+model:
+  backend: openvla
+dataset:
+  name: visionpilot_custom
+  version: local-v1
+  train_path: data/processed/visionpilot_custom_train.jsonl
+  validation_path: data/processed/visionpilot_custom_validation.jsonl
+training:
+  smoke_test: false
+  allow_large_run: false
+  micro_batch_size: 1
+  gradient_accumulation: 8
+  lora_rank: 8
+  lora_alpha: 16
+  learning_rate: 0.0001
+  epochs: 3

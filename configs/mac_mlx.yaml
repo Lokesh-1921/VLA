@@ -1,0 +1,15 @@
+extends: base.yaml
+project:
+  run_name: mac-smoke
+device:
+  preferred: mlx_then_mps_then_cpu
+model:
+  backend: numpy_smoke
+  action_dim: 7
+training:
+  smoke_test: true
+  allow_large_run: false
+  micro_batch_size: 1
+  gradient_accumulation: 8
+  epochs: 1
+  max_samples: 64

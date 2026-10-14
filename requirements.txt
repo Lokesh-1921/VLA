@@ -1,0 +1,18 @@
+# Core local tools (the smoke path only needs numpy, Pillow, PyYAML, psutil)
+numpy>=1.26
+Pillow>=10.0
+PyYAML>=6.0
+psutil>=5.9
+
+# Optional webcam UI
+opencv-python>=4.9
+
+# Optional PyTorch/OpenVLA integration. Install versions compatible with your Python/MPS setup.
+torch>=2.3
+transformers>=4.40
+accelerate>=0.30
+peft>=0.11
+safetensors>=0.4
+
+# Optional Apple Silicon runtime; must be paired with a verified OpenVLA-compatible conversion.
+mlx>=0.18; platform_system == "Darwin" and platform_machine == "arm64"

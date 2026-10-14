@@ -1,0 +1,19 @@
+numpy>=1.26
+Pillow>=10.0
+PyYAML>=6.0
+psutil>=5.9
+
+[mlx]
+
+[mlx:platform_system == "Darwin" and platform_machine == "arm64"]
+mlx>=0.18
+
+[openvla]
+torch>=2.3
+transformers>=4.40
+accelerate>=0.30
+peft>=0.11
+safetensors>=0.4
+
+[webcam]
+opencv-python>=4.9
